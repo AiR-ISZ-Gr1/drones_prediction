@@ -1,5 +1,5 @@
 data {
-  int I; //number of samples
+  // int I; //number of samples
   int N; //number of measurements
   int K; //number of basis functions
   matrix [N,K] X; //design matrix
@@ -25,10 +25,14 @@ data {
 
 generated quantities {
   array[N]real y_pred;
+  real sigma;
+  vector[K] betas;
+  vector[N] mu;
+
   sigma = exponential_rng(1);
   for (i in 1:N) {
-    beta[K] = normal_rng(0,1);
-    vector[N] mu = X*beta;
+    betas[K] = normal_rng(0,1);
+    mu = X*betas;
     y_pred[i] = normal_rng(mu[i],sigma);
   }
 
