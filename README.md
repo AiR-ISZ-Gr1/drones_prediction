@@ -26,5 +26,8 @@ After collecting data, files from the `logs_from_flights` folder were replayed i
 
 ![Photo of drone to collect data](photos/uav_logs.png)
 
+In file `preprocessing.ipynb` was made preprocessing from data whitch was generated in UAV Log Viewer. We saved thee types of data:
 
-
+- accelerometer data in the time domain
+- gyroscope data in the frequency domain
+- gyroscope data in the frequency domain with accumulation
