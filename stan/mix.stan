@@ -21,7 +21,7 @@ transformed data {
   R_ast_inverse = inverse(R_ast);
 }
 parameters {
-  matrix[K,M] theta;      // coefficients on Q_ast for each mixture component
+  matrix[K,M] betas;      // coefficients on Q_ast for each mixture component
   array [M] real<lower=0> sigma;  // error scale for each mixture component
   simplex [M] lambda; //mixture components
 }
@@ -30,19 +30,19 @@ model {
 
   for (m in 1:M) {
      /* code */
-     target += std_normal_lpdf(theta[1:K,m]);
+     target += std_normal_lpdf(betas[1:K,m]);
   }
 
   sigma ~ exponential(1);
   lambda ~ dirichlet(lambda0);
   
   for (n in 1:IL) {
-    target += normal_lpdf(y_labeled[1:N,n] | Q_ast * theta[1:K,labels[n]], sigma[labels[n]]);    
+    target += normal_lpdf(y_labeled[1:N,n] | x * betas[1:K,labels[n]], sigma[labels[n]]);    
   }  
 
 }
 generated quantities {
-  matrix[K,M] beta = R_ast_inverse * theta;// coefficients on x
+  // matrix[K,M] beta = R_ast_inverse * theta;// coefficients on x
   matrix[M,IT] probabilities;
   matrix[M,IT] log_probabilities;
   {
@@ -51,7 +51,7 @@ generated quantities {
       /* code */
       for (m in 1:M) {
          /* code */
-          log_probabilities[m,n]=normal_lpdf(y_test[1:N,n]|  Q_ast * theta[1:K,m], sigma[m]) +log(lambda[m]);   
+          log_probabilities[m,n]=normal_lpdf(y_test[1:N,n]|  x * betas[1:K,m], sigma[m]) +log(lambda[m]);   
           print("probs =", log_probabilities[m,n]);
 
       }
