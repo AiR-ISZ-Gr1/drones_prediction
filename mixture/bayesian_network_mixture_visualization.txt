@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+
+  \tikzstyle{selector}=[-latex, -|, snake=snake,segment amplitude=.4mm,segment length=2mm,line after snake=1mm, thick]
+
+
+  % Define nodes
+  % measurements
+  \node[obs]  (yl)   {$Y^{(m)}_n$}; %
+
+
+  \plate {yl_plate} {(yl)} {$n \in N$}; %
+
+  % parameters
+
+  \node[latent,  left=2 of yl]  (beta)   {$\beta_k$}; %
+  \plate {beta_plate} {(beta)} {$\ k \in K$}; %
+  \node[latent, below= 1 of beta] (sigma) {$\sigma_m$};
+
+  % priors
+  \factor[left= 1 of beta] {normal} {left:Normal$(0,1)$} {} {} ; %
+  \factor[left= 1 of sigma] {exp} {left:Exp$\left({1}\right)$} {} {} ; %
+
+
+  \plate {yls_plate} {(yl_plate)(beta_plate)(sigma)} {$i \in IL$}; %
+
+  \edge{beta_plate.east}{yl_plate.west}
+  \edge{sigma.east}{yl_plate.south west}
+  \edge{normal}{beta}
+  \edge{exp}{sigma}
+
+\end{tikzpicture}

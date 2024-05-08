@@ -26,7 +26,7 @@ model {
 generated quantities {
   array[N]real y_pred;
   for (i in 1:N) {
-    y_pred[i] = normal_rng(mu[i],sigma);
+    y_pred[i] = normal_rng(mu[i], sigma);
   }
 
 }
