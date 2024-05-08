@@ -433,8 +433,9 @@ class mix_model final : public model_base_crtp<mix_model> {
         for (int m = 1; m <= M; ++m) {
           current_statement__ = 19;
           lp_accum__.add(
-            std_normal_lpdf<false>(
-              rvalue(betas, "betas", index_min_max(1, K), index_uni(m))));
+            normal_lpdf<false>(
+              rvalue(betas, "betas", index_min_max(1, K), index_uni(m)), 0,
+              1));
         }
         current_statement__ = 22;
         lp_accum__.add(exponential_lpdf<propto__>(sigma, 1));

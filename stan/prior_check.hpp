@@ -17,26 +17,30 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 19> locations_array__ = 
+static constexpr std::array<const char*, 23> locations_array__ = 
 {" (found before start of program)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 27, column 2 to column 22)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 28, column 2 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 29, column 2 to column 18)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 30, column 2 to column 15)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 32, column 2 to column 29)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 34, column 4 to column 31)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 35, column 4 to column 17)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 36, column 4 to column 40)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 33, column 17 to line 37, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 33, column 2 to line 37, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 9, column 2 to column 19)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 10, column 2 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 11, column 2 to column 18)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 12, column 2 to column 15)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 14, column 2 to column 29)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 15, column 2 to column 23)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 17, column 6 to column 33)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 16, column 17 to line 18, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 16, column 2 to line 18, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 19, column 2 to column 15)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 20, column 2 to column 17)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 22, column 4 to column 40)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 21, column 17 to line 23, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 21, column 2 to line 23, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 2, column 2 to column 8)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 3, column 2 to column 8)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 4, column 2 to column 8)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 5, column 10 to column 11)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 5, column 12 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 5, column 2 to column 17)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 27, column 8 to column 9)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 29, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 30, column 9 to column 10)"};
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 4, column 10 to column 11)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 4, column 12 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 4, column 2 to column 17)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 9, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 11, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 12, column 9 to column 10)"};
 
 
 
@@ -75,25 +79,25 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 11;
+      current_statement__ = 15;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 11;
+      current_statement__ = 15;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 12;
+      current_statement__ = 16;
       context__.validate_dims("data initialization","K","int",
            std::vector<size_t>{});
       K = std::numeric_limits<int>::min();
       
-      current_statement__ = 12;
+      current_statement__ = 16;
       K = context__.vals_i("K")[(1 - 1)];
-      current_statement__ = 13;
+      current_statement__ = 17;
       validate_non_negative_index("X", "N", N);
-      current_statement__ = 14;
+      current_statement__ = 18;
       validate_non_negative_index("X", "K", K);
-      current_statement__ = 15;
+      current_statement__ = 19;
       context__.validate_dims("data initialization","X","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(K)});
@@ -102,27 +106,27 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       
       {
         std::vector<local_scalar_t__> X_flat__;
-        current_statement__ = 15;
+        current_statement__ = 19;
         X_flat__ = context__.vals_r("X");
-        current_statement__ = 15;
+        current_statement__ = 19;
         pos__ = 1;
-        current_statement__ = 15;
+        current_statement__ = 19;
         for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
-          current_statement__ = 15;
+          current_statement__ = 19;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 15;
+            current_statement__ = 19;
             assign(X, X_flat__[(pos__ - 1)],
               "assigning variable X", index_uni(sym2__), index_uni(sym1__));
-            current_statement__ = 15;
+            current_statement__ = 19;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 16;
+      current_statement__ = 20;
       validate_non_negative_index("y_pred", "N", N);
-      current_statement__ = 17;
+      current_statement__ = 21;
       validate_non_negative_index("betas", "K", K);
-      current_statement__ = 18;
+      current_statement__ = 22;
       validate_non_negative_index("mu", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -193,9 +197,9 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      std::vector<double> y_pred;
-      y_pred = std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      
+      Eigen::Matrix<double, -1, 1> y_pred;
+      y_pred = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(y_pred, std::numeric_limits<double>::quiet_NaN());
       
       double sigma;
       sigma = std::numeric_limits<double>::quiet_NaN();
@@ -210,14 +214,29 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       
       current_statement__ = 5;
       sigma = exponential_rng(1, base_rng__);
-      current_statement__ = 10;
-      for (int i = 1; i <= N; ++i) {
-        current_statement__ = 6;
-        assign(betas, normal_rng(0, 1, base_rng__),
-          "assigning variable betas", index_uni(K));
+      current_statement__ = 6;
+      if (pstream__) {
+        stan_print(pstream__, "sigma");
+        stan_print(pstream__, sigma);
+        stan_print(pstream__, "\n");
+      }
+      current_statement__ = 9;
+      for (int k = 1; k <= K; ++k) {
         current_statement__ = 7;
-        assign(mu, multiply(X, betas), "assigning variable mu");
-        current_statement__ = 8;
+        assign(betas, normal_rng(2, 6, base_rng__),
+          "assigning variable betas", index_uni(k));
+      }
+      current_statement__ = 10;
+      assign(mu, multiply(X, betas), "assigning variable mu");
+      current_statement__ = 11;
+      if (pstream__) {
+        stan_print(pstream__, "mu");
+        stan_print(pstream__, mu);
+        stan_print(pstream__, "\n");
+      }
+      current_statement__ = 14;
+      for (int i = 1; i <= N; ++i) {
+        current_statement__ = 12;
         assign(y_pred,
           normal_rng(rvalue(mu, "mu", index_uni(i)), sigma, base_rng__),
           "assigning variable y_pred", index_uni(i));
@@ -344,13 +363,13 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"y_pred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"y_pred\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"y_pred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"y_pred\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     

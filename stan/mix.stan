@@ -30,7 +30,7 @@ model {
 
   for (m in 1:M) {
      /* code */
-     target += std_normal_lpdf(betas[1:K,m]);
+     target += normal_lpdf(betas[1:K,m]|0,1);
   }
 
   sigma ~ exponential(1);
