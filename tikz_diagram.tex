@@ -1,0 +1,73 @@
+
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}
+
+  % definition of styles
+
+  \tikzstyle{selector}=[-latex, -|, snake=snake,segment amplitude=.4mm,segment length=2mm,line after snake=1mm, thick]
+
+
+  % Define nodes
+  % measurements
+  \node[obs]          (y)   {$Y_n$}; %
+  \node[obs, above = 4 of y]  (yl)   {$Y^{(m)}_n$}; %
+
+  \plate {y_plate} {(y)} {$n \in N$}; %
+
+  \plate {yl_plate} {(yl)} {$n \in N$}; %
+  %\plate {yls_plate} {(yl_plate)} {$i \in IL$}; %
+
+
+
+  % parameters
+
+  \node[latent,  left=2 of yl]  (beta)   {$\beta_k$}; %
+  \plate {beta_plate} {(beta)} {$\ k \in K$}; %
+  \node[latent, below= 1 of beta] (sigma) {$\sigma_m$};
+  % \node[latent, above right=1 of plus] (beta)   {$\beta$}; %
+  % \node[latent, right = of FT-f] (kappa) {$\kappa$};
+  % \node[latent, left = of y-f] (phi) {$\phi$};
+
+  \node[latent, left = 1 of y] (lambda) {$\lambda_m$};
+
+
+  % priors
+  \factor[left= 1 of beta] {normal} {left:Normal$(0,1)$} {} {} ; %
+  \factor[left= 1 of sigma] {exp} {left:Exp$\left(\frac{1}{10}\right)$} {} {} ; %
+  \factor[left= 1 of lambda] {dir} {left:Dirichlet$(\lambda_0)$} {} {} ; %
+
+  % mixture plate
+
+  \plate {yls_plate} {(yl_plate)(beta_plate)(sigma)} {$i \in IL$}; %
+
+
+  \plate {component}{(yls_plate)(normal)(exp)(normal-caption)}{$m\in M$};
+  \plate {} {(lambda)(y_plate)} {$i \in I$}; %
+
+
+
+  %\factor[left = 1 of beta](normal){left:Normal}{}{};
+
+  % \factor[above=of FT] {FT-f} {left:Gamma} {} {} ; %
+
+
+
+  % % link functions
+
+  % \node[det, above=of y]            (exp) {exp} ; % 
+  % \node[det, above = of FT-f]            (exp2) {exp} ; % 
+
+  % \node[det, above=of exp]            (plus) {+} ; % 
+  % %
+
+  \path (lambda) edge [selector] (y);
+  \edge {dir} {lambda} ;
+  \edge{beta_plate.east}{yl_plate.west}
+  \edge{beta_plate.east}{y_plate.north}
+  \edge{sigma.east}{yl_plate.south west, y_plate.north west}
+  \edge{normal}{beta}
+  \edge{exp}{sigma}
+
+\end{tikzpicture}
+\end{document}

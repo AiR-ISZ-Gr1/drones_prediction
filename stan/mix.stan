@@ -11,15 +11,7 @@ data {
   matrix[N,IT]  y_test;      // matrix of test outputs
   
 }
-transformed data {
-  matrix[N, K] Q_ast;
-  matrix[K, K] R_ast;
-  matrix[K, K] R_ast_inverse;
-  // thin and scale the QR decomposition
-  Q_ast = qr_thin_Q(x) * sqrt(N - 1);
-  R_ast = qr_thin_R(x) / sqrt(N - 1);
-  R_ast_inverse = inverse(R_ast);
-}
+
 parameters {
   matrix[K,M] betas;      // coefficients on Q_ast for each mixture component
   array [M] real<lower=0> sigma;  // error scale for each mixture component
@@ -42,7 +34,6 @@ model {
 
 }
 generated quantities {
-  // matrix[K,M] beta = R_ast_inverse * theta;// coefficients on x
   matrix[M,IT] probabilities;
   matrix[M,IT] log_probabilities;
   {

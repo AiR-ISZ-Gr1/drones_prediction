@@ -7,14 +7,14 @@ data {
 
 generated quantities {
   vector[N] y_pred;
-  real sigma;
+  real<lower=0> sigma;
   vector[K] betas;
   vector[N] mu;
 
-  sigma = exponential_rng(1);
+  sigma = normal_rng(10,1);
   print("sigma",sigma);
   for (k in 1:K) {
-      betas[k] = normal_rng(2,6);
+      betas[k] = normal_rng(0,1);
   }
   mu = X*betas;
   print("mu",mu);

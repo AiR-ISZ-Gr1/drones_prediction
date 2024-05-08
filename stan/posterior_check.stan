@@ -7,16 +7,16 @@ data {
 }
 
 parameters {
-  vector [K] beta;
+  vector [K] betas;
   real<lower=0> sigma;
 }
 
 transformed parameters {
-  vector[N] mu = X*beta;
+  vector[N] mu = X*betas;
 }
 
 model {
-  beta ~ normal(2,6);
+  betas ~ normal(0,1);
   sigma ~ exponential(1);
   for (i in 1:I){
     y[:,i] ~ normal(mu,sigma);

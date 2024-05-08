@@ -20,10 +20,10 @@ stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 23> locations_array__ = 
 {" (found before start of program)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 9, column 2 to column 19)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 10, column 2 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 10, column 2 to column 22)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 11, column 2 to column 18)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 12, column 2 to column 15)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 14, column 2 to column 29)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 14, column 2 to column 27)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 15, column 2 to column 23)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 17, column 6 to column 33)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/prior_check.stan', line 16, column 17 to line 18, column 3)",
@@ -213,7 +213,7 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       stan::math::fill(mu, std::numeric_limits<double>::quiet_NaN());
       
       current_statement__ = 5;
-      sigma = exponential_rng(1, base_rng__);
+      sigma = normal_rng(10, 1, base_rng__);
       current_statement__ = 6;
       if (pstream__) {
         stan_print(pstream__, "sigma");
@@ -223,7 +223,7 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
       current_statement__ = 9;
       for (int k = 1; k <= K; ++k) {
         current_statement__ = 7;
-        assign(betas, normal_rng(2, 6, base_rng__),
+        assign(betas, normal_rng(0, 1, base_rng__),
           "assigning variable betas", index_uni(k));
       }
       current_statement__ = 10;
@@ -241,6 +241,8 @@ class prior_check_model final : public model_base_crtp<prior_check_model> {
           normal_rng(rvalue(mu, "mu", index_uni(i)), sigma, base_rng__),
           "assigning variable y_pred", index_uni(i));
       }
+      current_statement__ = 2;
+      check_greater_or_equal(function__, "sigma", sigma, 0);
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         vars__.emplace_back(y_pred[(sym1__ - 1)]);
       }
