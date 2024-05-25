@@ -17,34 +17,34 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 65> locations_array__ = 
+static constexpr std::array<const char*, 53> locations_array__ = 
 {" (found before start of program)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 24, column 2 to column 20)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 25, column 2 to column 32)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 26, column 2 to column 21)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 46, column 2 to column 29)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 47, column 2 to column 33)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 49, column 2 to column 18)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 54, column 10 to column 105)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 55, column 10 to column 51)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 52, column 21 to line 57, column 7)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 52, column 6 to line 57, column 7)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 58, column 6 to column 58)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 59, column 6 to column 69)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 50, column 19 to line 60, column 4)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 50, column 3 to line 60, column 4)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 48, column 2 to line 61, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 62, column 2 to column 41)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 29, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 29, column 2 to column 37)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 33, column 5 to column 45)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 17 to line 34, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 2 to line 34, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 36, column 2 to column 25)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 2 to column 30)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 40, column 4 to column 89)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 39, column 18 to line 41, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 39, column 2 to line 41, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 2 to column 20)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 2 to column 32)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 18, column 2 to column 21)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 2 to column 29)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 2 to column 33)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 40, column 2 to column 18)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 45, column 10 to column 105)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 46, column 10 to column 51)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 43, column 21 to line 48, column 7)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 43, column 6 to line 48, column 7)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 49, column 6 to column 58)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 50, column 6 to column 69)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 41, column 19 to line 51, column 4)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 41, column 3 to line 51, column 4)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 39, column 2 to line 52, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 53, column 2 to column 41)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 2 to column 37)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 25, column 5 to column 45)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 23, column 17 to line 26, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 23, column 2 to line 26, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 28, column 2 to column 25)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 29, column 2 to column 30)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 32, column 4 to column 89)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 18 to line 33, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 2 to line 33, column 3)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 2, column 2 to column 17)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 3, column 2 to column 18)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 4, column 2 to column 17)",
@@ -63,26 +63,14 @@ static constexpr std::array<const char*, 65> locations_array__ =
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 9 to column 10)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 11 to column 13)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 2 to column 23)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 12 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 2 to column 21)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 12 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 2 to column 21)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 11 to column 12)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 12 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 2 to column 29)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 19, column 2 to column 37)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 20, column 2 to column 37)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 2 to column 33)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 24, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 24, column 11 to column 12)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 25, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 26, column 11 to column 12)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 46, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 46, column 11 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 47, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 47, column 11 to column 13)"};
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 18, column 11 to column 12)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 11 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 11 to column 13)"};
 
 
 
@@ -98,17 +86,11 @@ class mix_model final : public model_base_crtp<mix_model> {
   Eigen::Matrix<double, -1, -1> y_labeled__;
   Eigen::Matrix<double, -1, 1> lambda0__;
   int IT;
-  Eigen::Matrix<double, -1, -1> y_test__;
-  Eigen::Matrix<double, -1, -1> Q_ast__;
-  Eigen::Matrix<double, -1, -1> R_ast__;
-  Eigen::Matrix<double, -1, -1> R_ast_inverse__; 
+  Eigen::Matrix<double, -1, -1> y_test__; 
   Eigen::Map<Eigen::Matrix<double, -1, -1>> x{nullptr, 0, 0};
   Eigen::Map<Eigen::Matrix<double, -1, -1>> y_labeled{nullptr, 0, 0};
   Eigen::Map<Eigen::Matrix<double, -1, 1>> lambda0{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, -1>> y_test{nullptr, 0, 0};
-  Eigen::Map<Eigen::Matrix<double, -1, -1>> Q_ast{nullptr, 0, 0};
-  Eigen::Map<Eigen::Matrix<double, -1, -1>> R_ast{nullptr, 0, 0};
-  Eigen::Map<Eigen::Matrix<double, -1, -1>> R_ast_inverse{nullptr, 0, 0};
  
  public:
   ~mix_model() { }
@@ -320,57 +302,20 @@ class mix_model final : public model_base_crtp<mix_model> {
         }
       }
       current_statement__ = 45;
-      validate_non_negative_index("Q_ast", "N", N);
-      current_statement__ = 46;
-      validate_non_negative_index("Q_ast", "K", K);
-      current_statement__ = 47;
-      Q_ast__ = Eigen::Matrix<double, -1, -1>(N, K);
-      new (&Q_ast) Eigen::Map<Eigen::Matrix<double, -1, -1>>(Q_ast__.data(), N, K);
-      stan::math::fill(Q_ast, std::numeric_limits<double>::quiet_NaN());
-      
-      current_statement__ = 48;
-      validate_non_negative_index("R_ast", "K", K);
-      current_statement__ = 49;
-      validate_non_negative_index("R_ast", "K", K);
-      current_statement__ = 50;
-      R_ast__ = Eigen::Matrix<double, -1, -1>(K, K);
-      new (&R_ast) Eigen::Map<Eigen::Matrix<double, -1, -1>>(R_ast__.data(), K, K);
-      stan::math::fill(R_ast, std::numeric_limits<double>::quiet_NaN());
-      
-      current_statement__ = 51;
-      validate_non_negative_index("R_ast_inverse", "K", K);
-      current_statement__ = 52;
-      validate_non_negative_index("R_ast_inverse", "K", K);
-      current_statement__ = 53;
-      R_ast_inverse__ = Eigen::Matrix<double, -1, -1>(K, K);
-      new (&R_ast_inverse) Eigen::Map<Eigen::Matrix<double, -1, -1>>(R_ast_inverse__.data(), K, K);
-      stan::math::fill(R_ast_inverse, std::numeric_limits<double>::quiet_NaN());
-      
-      
-      current_statement__ = 54;
-      assign(Q_ast, multiply(qr_thin_Q(x), stan::math::sqrt((N - 1))),
-        "assigning variable Q_ast");
-      current_statement__ = 55;
-      assign(R_ast, divide(qr_thin_R(x), stan::math::sqrt((N - 1))),
-        "assigning variable R_ast");
-      current_statement__ = 56;
-      assign(R_ast_inverse, inverse(R_ast),
-        "assigning variable R_ast_inverse");
-      current_statement__ = 57;
       validate_non_negative_index("betas", "K", K);
-      current_statement__ = 58;
+      current_statement__ = 46;
       validate_non_negative_index("betas", "M", M);
-      current_statement__ = 59;
+      current_statement__ = 47;
       validate_non_negative_index("sigma", "M", M);
-      current_statement__ = 60;
+      current_statement__ = 48;
       validate_positive_index("lambda", "M", M);
-      current_statement__ = 61;
+      current_statement__ = 49;
       validate_non_negative_index("probabilities", "M", M);
-      current_statement__ = 62;
+      current_statement__ = 50;
       validate_non_negative_index("probabilities", "IT", IT);
-      current_statement__ = 63;
+      current_statement__ = 51;
       validate_non_negative_index("log_probabilities", "M", M);
-      current_statement__ = 64;
+      current_statement__ = 52;
       validate_non_negative_index("log_probabilities", "IT", IT);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
