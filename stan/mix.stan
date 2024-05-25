@@ -6,7 +6,6 @@ data {
   matrix[N, K] x;   // predictor matrix
   array[IL] int<lower=1,upper=M> labels;
   matrix[N,IL]  y_labeled;      // matrix of labeled outputs
-  simplex [M] lambda0; // prior for mixture components
   int<lower=1> IT;   // number of test data items
   matrix[N,IT]  y_test;      // matrix of test outputs
   
@@ -18,7 +17,6 @@ parameters {
   simplex [M] lambda; //mixture components
 }
 model {
-  vector[M] log_lambda = log(lambda);  // cache log calculation
 
   for (m in 1:M) {
      /* code */
@@ -26,7 +24,6 @@ model {
   }
 
   sigma ~ exponential(1);
-  lambda ~ dirichlet(lambda0);
   
   for (n in 1:IL) {
     target += normal_lpdf(y_labeled[1:N,n] | x * betas[1:K,labels[n]], sigma[labels[n]]);    
@@ -42,7 +39,8 @@ generated quantities {
       /* code */
       for (m in 1:M) {
          /* code */
-          log_probabilities[m,n]=normal_lpdf(y_test[1:N,n]|  x * betas[1:K,m], sigma[m]) +log(lambda[m]);   
+          log_probabilities[m,n]=normal_lpdf(y_test[1:N,n]|  x * betas[1:K,m], sigma[m]);   
+
           print("probs =", log_probabilities[m,n]);
 
       }

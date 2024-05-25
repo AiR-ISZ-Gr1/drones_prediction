@@ -17,34 +17,31 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 53> locations_array__ = 
+static constexpr std::array<const char*, 48> locations_array__ = 
 {" (found before start of program)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 2 to column 20)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 2 to column 32)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 18, column 2 to column 21)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 2 to column 29)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 2 to column 33)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 40, column 2 to column 18)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 45, column 10 to column 105)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 46, column 10 to column 51)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 43, column 21 to line 48, column 7)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 43, column 6 to line 48, column 7)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 49, column 6 to column 58)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 50, column 6 to column 69)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 41, column 19 to line 51, column 4)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 41, column 3 to line 51, column 4)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 39, column 2 to line 52, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 53, column 2 to column 41)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 2 to column 37)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 25, column 5 to column 45)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 23, column 17 to line 26, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 23, column 2 to line 26, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 28, column 2 to column 25)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 29, column 2 to column 30)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 32, column 4 to column 89)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 18 to line 33, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 31, column 2 to line 33, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 2 to column 20)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 2 to column 32)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 2 to column 21)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 34, column 2 to column 29)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 35, column 2 to column 33)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 2 to column 18)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 42, column 10 to column 89)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 44, column 10 to column 51)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 40, column 21 to line 46, column 7)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 40, column 6 to line 46, column 7)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 47, column 6 to column 58)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 48, column 6 to column 69)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 19 to line 49, column 4)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 3 to line 49, column 4)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 36, column 2 to line 50, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 51, column 2 to column 41)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 23, column 5 to column 45)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 17 to line 24, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 21, column 2 to line 24, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 26, column 2 to column 25)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 29, column 4 to column 89)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 28, column 18 to line 30, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 28, column 2 to line 30, column 3)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 2, column 2 to column 17)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 3, column 2 to column 18)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 4, column 2 to column 17)",
@@ -57,20 +54,18 @@ static constexpr std::array<const char*, 53> locations_array__ =
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 8, column 9 to column 10)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 8, column 11 to column 13)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 8, column 2 to column 26)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 9, column 11 to column 12)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 9, column 2 to column 22)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 10, column 2 to column 18)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 11 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 11, column 2 to column 23)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 9, column 2 to column 18)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 10, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 10, column 11 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 10, column 2 to column 23)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 15, column 11 to column 12)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 16, column 11 to column 12)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 18, column 11 to column 12)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 37, column 11 to column 13)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 38, column 11 to column 13)"};
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 17, column 11 to column 12)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 34, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 34, column 11 to column 13)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 35, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/mix.stan', line 35, column 11 to column 13)"};
 
 
 
@@ -84,12 +79,10 @@ class mix_model final : public model_base_crtp<mix_model> {
   Eigen::Matrix<double, -1, -1> x__;
   std::vector<int> labels;
   Eigen::Matrix<double, -1, -1> y_labeled__;
-  Eigen::Matrix<double, -1, 1> lambda0__;
   int IT;
   Eigen::Matrix<double, -1, -1> y_test__; 
   Eigen::Map<Eigen::Matrix<double, -1, -1>> x{nullptr, 0, 0};
   Eigen::Map<Eigen::Matrix<double, -1, -1>> y_labeled{nullptr, 0, 0};
-  Eigen::Map<Eigen::Matrix<double, -1, 1>> lambda0{nullptr, 0};
   Eigen::Map<Eigen::Matrix<double, -1, -1>> y_test{nullptr, 0, 0};
  
  public:
@@ -118,47 +111,47 @@ class mix_model final : public model_base_crtp<mix_model> {
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 27;
+      current_statement__ = 24;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 27;
+      current_statement__ = 24;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 27;
+      current_statement__ = 24;
       check_greater_or_equal(function__, "N", N, 1);
-      current_statement__ = 28;
+      current_statement__ = 25;
       context__.validate_dims("data initialization","IL","int",
            std::vector<size_t>{});
       IL = std::numeric_limits<int>::min();
       
-      current_statement__ = 28;
+      current_statement__ = 25;
       IL = context__.vals_i("IL")[(1 - 1)];
-      current_statement__ = 28;
+      current_statement__ = 25;
       check_greater_or_equal(function__, "IL", IL, 1);
-      current_statement__ = 29;
+      current_statement__ = 26;
       context__.validate_dims("data initialization","K","int",
            std::vector<size_t>{});
       K = std::numeric_limits<int>::min();
       
-      current_statement__ = 29;
+      current_statement__ = 26;
       K = context__.vals_i("K")[(1 - 1)];
-      current_statement__ = 29;
+      current_statement__ = 26;
       check_greater_or_equal(function__, "K", K, 1);
-      current_statement__ = 30;
+      current_statement__ = 27;
       context__.validate_dims("data initialization","M","int",
            std::vector<size_t>{});
       M = std::numeric_limits<int>::min();
       
-      current_statement__ = 30;
+      current_statement__ = 27;
       M = context__.vals_i("M")[(1 - 1)];
-      current_statement__ = 30;
+      current_statement__ = 27;
       check_greater_or_equal(function__, "M", M, 1);
-      current_statement__ = 31;
+      current_statement__ = 28;
       validate_non_negative_index("x", "N", N);
-      current_statement__ = 32;
+      current_statement__ = 29;
       validate_non_negative_index("x", "K", K);
-      current_statement__ = 33;
+      current_statement__ = 30;
       context__.validate_dims("data initialization","x","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(K)});
@@ -167,48 +160,48 @@ class mix_model final : public model_base_crtp<mix_model> {
       
       {
         std::vector<local_scalar_t__> x_flat__;
-        current_statement__ = 33;
+        current_statement__ = 30;
         x_flat__ = context__.vals_r("x");
-        current_statement__ = 33;
+        current_statement__ = 30;
         pos__ = 1;
-        current_statement__ = 33;
+        current_statement__ = 30;
         for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
-          current_statement__ = 33;
+          current_statement__ = 30;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 33;
+            current_statement__ = 30;
             assign(x, x_flat__[(pos__ - 1)],
               "assigning variable x", index_uni(sym2__), index_uni(sym1__));
-            current_statement__ = 33;
+            current_statement__ = 30;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 34;
+      current_statement__ = 31;
       validate_non_negative_index("labels", "IL", IL);
-      current_statement__ = 35;
+      current_statement__ = 32;
       context__.validate_dims("data initialization","labels","int",
            std::vector<size_t>{static_cast<size_t>(IL)});
       labels = std::vector<int>(IL, std::numeric_limits<int>::min());
       
-      current_statement__ = 35;
+      current_statement__ = 32;
       labels = context__.vals_i("labels");
-      current_statement__ = 35;
+      current_statement__ = 32;
       for (int sym1__ = 1; sym1__ <= IL; ++sym1__) {
-        current_statement__ = 35;
+        current_statement__ = 32;
         check_greater_or_equal(function__, "labels[sym1__]",
                                labels[(sym1__ - 1)], 1);
       }
-      current_statement__ = 35;
+      current_statement__ = 32;
       for (int sym1__ = 1; sym1__ <= IL; ++sym1__) {
-        current_statement__ = 35;
+        current_statement__ = 32;
         check_less_or_equal(function__, "labels[sym1__]",
                             labels[(sym1__ - 1)], M);
       }
-      current_statement__ = 36;
+      current_statement__ = 33;
       validate_non_negative_index("y_labeled", "N", N);
-      current_statement__ = 37;
+      current_statement__ = 34;
       validate_non_negative_index("y_labeled", "IL", IL);
-      current_statement__ = 38;
+      current_statement__ = 35;
       context__.validate_dims("data initialization","y_labeled","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(IL)});
@@ -218,63 +211,37 @@ class mix_model final : public model_base_crtp<mix_model> {
       
       {
         std::vector<local_scalar_t__> y_labeled_flat__;
-        current_statement__ = 38;
+        current_statement__ = 35;
         y_labeled_flat__ = context__.vals_r("y_labeled");
-        current_statement__ = 38;
+        current_statement__ = 35;
         pos__ = 1;
-        current_statement__ = 38;
+        current_statement__ = 35;
         for (int sym1__ = 1; sym1__ <= IL; ++sym1__) {
-          current_statement__ = 38;
+          current_statement__ = 35;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 38;
+            current_statement__ = 35;
             assign(y_labeled, y_labeled_flat__[(pos__ - 1)],
               "assigning variable y_labeled", index_uni(sym2__),
                                                 index_uni(sym1__));
-            current_statement__ = 38;
+            current_statement__ = 35;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 39;
-      validate_non_negative_index("lambda0", "M", M);
-      current_statement__ = 40;
-      context__.validate_dims("data initialization","lambda0","double",
-           std::vector<size_t>{static_cast<size_t>(M)});
-      lambda0__ = Eigen::Matrix<double, -1, 1>(M);
-      new (&lambda0) Eigen::Map<Eigen::Matrix<double, -1, 1>>(lambda0__.data(), M);
-      
-      
-      {
-        std::vector<local_scalar_t__> lambda0_flat__;
-        current_statement__ = 40;
-        lambda0_flat__ = context__.vals_r("lambda0");
-        current_statement__ = 40;
-        pos__ = 1;
-        current_statement__ = 40;
-        for (int sym1__ = 1; sym1__ <= M; ++sym1__) {
-          current_statement__ = 40;
-          assign(lambda0, lambda0_flat__[(pos__ - 1)],
-            "assigning variable lambda0", index_uni(sym1__));
-          current_statement__ = 40;
-          pos__ = (pos__ + 1);
-        }
-      }
-      current_statement__ = 40;
-      check_simplex(function__, "lambda0", lambda0);
-      current_statement__ = 41;
+      current_statement__ = 36;
       context__.validate_dims("data initialization","IT","int",
            std::vector<size_t>{});
       IT = std::numeric_limits<int>::min();
       
-      current_statement__ = 41;
+      current_statement__ = 36;
       IT = context__.vals_i("IT")[(1 - 1)];
-      current_statement__ = 41;
+      current_statement__ = 36;
       check_greater_or_equal(function__, "IT", IT, 1);
-      current_statement__ = 42;
+      current_statement__ = 37;
       validate_non_negative_index("y_test", "N", N);
-      current_statement__ = 43;
+      current_statement__ = 38;
       validate_non_negative_index("y_test", "IT", IT);
-      current_statement__ = 44;
+      current_statement__ = 39;
       context__.validate_dims("data initialization","y_test","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(IT)});
@@ -284,38 +251,38 @@ class mix_model final : public model_base_crtp<mix_model> {
       
       {
         std::vector<local_scalar_t__> y_test_flat__;
-        current_statement__ = 44;
+        current_statement__ = 39;
         y_test_flat__ = context__.vals_r("y_test");
-        current_statement__ = 44;
+        current_statement__ = 39;
         pos__ = 1;
-        current_statement__ = 44;
+        current_statement__ = 39;
         for (int sym1__ = 1; sym1__ <= IT; ++sym1__) {
-          current_statement__ = 44;
+          current_statement__ = 39;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 44;
+            current_statement__ = 39;
             assign(y_test, y_test_flat__[(pos__ - 1)],
               "assigning variable y_test", index_uni(sym2__),
                                              index_uni(sym1__));
-            current_statement__ = 44;
+            current_statement__ = 39;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 45;
+      current_statement__ = 40;
       validate_non_negative_index("betas", "K", K);
-      current_statement__ = 46;
+      current_statement__ = 41;
       validate_non_negative_index("betas", "M", M);
-      current_statement__ = 47;
+      current_statement__ = 42;
       validate_non_negative_index("sigma", "M", M);
-      current_statement__ = 48;
+      current_statement__ = 43;
       validate_positive_index("lambda", "M", M);
-      current_statement__ = 49;
+      current_statement__ = 44;
       validate_non_negative_index("probabilities", "M", M);
-      current_statement__ = 50;
+      current_statement__ = 45;
       validate_non_negative_index("probabilities", "IT", IT);
-      current_statement__ = 51;
+      current_statement__ = 46;
       validate_non_negative_index("log_probabilities", "M", M);
-      current_statement__ = 52;
+      current_statement__ = 47;
       validate_non_negative_index("log_probabilities", "IT", IT);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -365,30 +332,19 @@ class mix_model final : public model_base_crtp<mix_model> {
       lambda = in__.template read_constrain_simplex<Eigen::Matrix<local_scalar_t__, -1, 1>, jacobian__>(
                  lp__, M);
       {
-        current_statement__ = 17;
-        validate_non_negative_index("log_lambda", "M", M);
-        Eigen::Matrix<local_scalar_t__, -1, 1> log_lambda;
-        log_lambda = Eigen::Matrix<local_scalar_t__, -1, 1>(M);
-        stan::math::fill(log_lambda, DUMMY_VAR__);
-        
-        current_statement__ = 18;
-        assign(log_lambda, stan::math::log(lambda),
-          "assigning variable log_lambda");
-        current_statement__ = 21;
+        current_statement__ = 19;
         for (int m = 1; m <= M; ++m) {
-          current_statement__ = 19;
+          current_statement__ = 17;
           lp_accum__.add(
             normal_lpdf<false>(
               rvalue(betas, "betas", index_min_max(1, K), index_uni(m)), 0,
               1));
         }
-        current_statement__ = 22;
+        current_statement__ = 20;
         lp_accum__.add(exponential_lpdf<propto__>(sigma, 1));
         current_statement__ = 23;
-        lp_accum__.add(dirichlet_lpdf<propto__>(lambda, lambda0));
-        current_statement__ = 26;
         for (int n = 1; n <= IL; ++n) {
-          current_statement__ = 24;
+          current_statement__ = 21;
           lp_accum__.add(
             normal_lpdf<false>(
               rvalue(y_labeled, "y_labeled",
@@ -495,12 +451,11 @@ class mix_model final : public model_base_crtp<mix_model> {
           for (int m = 1; m <= M; ++m) {
             current_statement__ = 7;
             assign(log_probabilities,
-              (normal_lpdf<false>(
-                 rvalue(y_test, "y_test", index_min_max(1, N), index_uni(n)),
-                 multiply(x,
-                   rvalue(betas, "betas", index_min_max(1, K), index_uni(m))),
-                 rvalue(sigma, "sigma", index_uni(m))) +
-                stan::math::log(rvalue(lambda, "lambda", index_uni(m)))),
+              normal_lpdf<false>(
+                rvalue(y_test, "y_test", index_min_max(1, N), index_uni(n)),
+                multiply(x,
+                  rvalue(betas, "betas", index_min_max(1, K), index_uni(m))),
+                rvalue(sigma, "sigma", index_uni(m))),
               "assigning variable log_probabilities", index_uni(m),
                                                         index_uni(n));
             current_statement__ = 8;
