@@ -11,7 +11,7 @@ generated quantities {
   vector[K] betas;
   vector[N] mu;
 
-  sigma = normal_rng(10,1);
+  sigma = exponential_rng(1);
   print("sigma",sigma);
   for (k in 1:K) {
       betas[k] = normal_rng(0,1);
