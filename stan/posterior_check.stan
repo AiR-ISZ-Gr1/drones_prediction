@@ -29,4 +29,21 @@ generated quantities {
     y_pred[i] = normal_rng(mu[i], sigma);
   }
 
+  vector[N] y_pred_hat;
+  real<lower=0> sigma_sim_hat;
+  vector[K] betas_sim_hat;
+  vector[N] mu_hat;
+
+  sigma_sim_hat = exponential_rng(1);
+  print("sigma",sigma);
+  for (k in 1:K) {
+      betas_sim_hat[k] = normal_rng(0,1);
+  }
+
+  mu_hat = X*betas_sim_hat;
+  print("mu",mu);
+  for (i in 1:N) {
+    y_pred_hat[i] = normal_rng(mu_hat[i],sigma_sim_hat);
+  }
+
 }

@@ -134,7 +134,7 @@ def get_results(model, data, labels, IT, IL, total, mode = 'binary',plot = False
         b = sum((cat2["mean"].values) < np.log(0.5))
 
         hit_rate = 1 - (a+b)/(total-IL)
-        print('hit rate = ',hit_rate)
+        # print('hit rate = ',hit_rate)
     if mode == 'all':
         result = model.sample(data=data, seed=seed)
         probs_from_arviz = az.summary(
