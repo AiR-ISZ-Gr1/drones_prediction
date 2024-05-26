@@ -17,29 +17,31 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 42> locations_array__ = 
+static constexpr std::array<const char*, 45> locations_array__ = 
 {" (found before start of program)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 10, column 2 to column 19)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 11, column 2 to column 22)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 15, column 2 to column 25)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 27, column 2 to column 22)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 29, column 4 to column 41)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 28, column 17 to line 30, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 28, column 2 to line 30, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 32, column 2 to column 23)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 33, column 2 to column 30)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 34, column 2 to column 26)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 35, column 2 to column 19)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 37, column 2 to column 37)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 38, column 2 to column 23)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 40, column 6 to column 41)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 39, column 17 to line 41, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 39, column 2 to line 41, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 43, column 2 to column 27)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 44, column 2 to column 17)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 46, column 4 to column 56)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 45, column 17 to line 47, column 3)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 45, column 2 to line 47, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 27, column 2 to column 21)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 28, column 2 to column 20)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 30, column 4 to column 50)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 31, column 4 to column 40)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 29, column 17 to line 32, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 29, column 2 to line 32, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 34, column 2 to column 23)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 35, column 2 to column 30)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 36, column 2 to column 26)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 37, column 2 to column 19)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 39, column 2 to column 37)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 40, column 2 to column 23)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 42, column 6 to column 41)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 41, column 17 to line 43, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 41, column 2 to line 43, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 45, column 2 to column 27)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 46, column 2 to column 17)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 48, column 4 to column 56)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 47, column 17 to line 49, column 3)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 47, column 2 to line 49, column 3)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 19, column 2 to column 22)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 20, column 2 to column 25)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 22, column 4 to column 30)",
@@ -57,9 +59,10 @@ static constexpr std::array<const char*, 42> locations_array__ =
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 10, column 10 to column 11)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 15, column 9 to column 10)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 27, column 8 to column 9)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 32, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 28, column 9 to column 10)",
  " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 34, column 9 to column 10)",
- " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 35, column 9 to column 10)"};
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 36, column 9 to column 10)",
+ " (in '/Users/kacperjarzyna/Desktop/studia/DATA_ANALYTICS_DRONE/drones_prediction/stan/posterior_check.stan', line 37, column 9 to column 10)"};
 
 
 
@@ -101,32 +104,32 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 27;
+      current_statement__ = 29;
       context__.validate_dims("data initialization","I","int",
            std::vector<size_t>{});
       I = std::numeric_limits<int>::min();
       
-      current_statement__ = 27;
+      current_statement__ = 29;
       I = context__.vals_i("I")[(1 - 1)];
-      current_statement__ = 28;
+      current_statement__ = 30;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 28;
+      current_statement__ = 30;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 29;
+      current_statement__ = 31;
       context__.validate_dims("data initialization","K","int",
            std::vector<size_t>{});
       K = std::numeric_limits<int>::min();
       
-      current_statement__ = 29;
-      K = context__.vals_i("K")[(1 - 1)];
-      current_statement__ = 30;
-      validate_non_negative_index("X", "N", N);
       current_statement__ = 31;
-      validate_non_negative_index("X", "K", K);
+      K = context__.vals_i("K")[(1 - 1)];
       current_statement__ = 32;
+      validate_non_negative_index("X", "N", N);
+      current_statement__ = 33;
+      validate_non_negative_index("X", "K", K);
+      current_statement__ = 34;
       context__.validate_dims("data initialization","X","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(K)});
@@ -135,27 +138,27 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       
       {
         std::vector<local_scalar_t__> X_flat__;
-        current_statement__ = 32;
+        current_statement__ = 34;
         X_flat__ = context__.vals_r("X");
-        current_statement__ = 32;
+        current_statement__ = 34;
         pos__ = 1;
-        current_statement__ = 32;
+        current_statement__ = 34;
         for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
-          current_statement__ = 32;
+          current_statement__ = 34;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 32;
+            current_statement__ = 34;
             assign(X, X_flat__[(pos__ - 1)],
               "assigning variable X", index_uni(sym2__), index_uni(sym1__));
-            current_statement__ = 32;
+            current_statement__ = 34;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 33;
-      validate_non_negative_index("y", "N", N);
-      current_statement__ = 34;
-      validate_non_negative_index("y", "I", I);
       current_statement__ = 35;
+      validate_non_negative_index("y", "N", N);
+      current_statement__ = 36;
+      validate_non_negative_index("y", "I", I);
+      current_statement__ = 37;
       context__.validate_dims("data initialization","y","double",
            std::vector<size_t>{static_cast<size_t>(N),
             static_cast<size_t>(I)});
@@ -164,43 +167,45 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       
       {
         std::vector<local_scalar_t__> y_flat__;
-        current_statement__ = 35;
+        current_statement__ = 37;
         y_flat__ = context__.vals_r("y");
-        current_statement__ = 35;
+        current_statement__ = 37;
         pos__ = 1;
-        current_statement__ = 35;
+        current_statement__ = 37;
         for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
-          current_statement__ = 35;
+          current_statement__ = 37;
           for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            current_statement__ = 35;
+            current_statement__ = 37;
             assign(y, y_flat__[(pos__ - 1)],
               "assigning variable y", index_uni(sym2__), index_uni(sym1__));
-            current_statement__ = 35;
+            current_statement__ = 37;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 35;
+      current_statement__ = 37;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 35;
+        current_statement__ = 37;
         for (int sym2__ = 1; sym2__ <= I; ++sym2__) {
-          current_statement__ = 35;
+          current_statement__ = 37;
           check_greater_or_equal(function__, "y[sym1__, sym2__]",
                                  rvalue(y, "y",
                                    index_uni(sym1__), index_uni(sym2__)), 0);
         }
       }
-      current_statement__ = 36;
-      validate_non_negative_index("betas", "K", K);
-      current_statement__ = 37;
-      validate_non_negative_index("mu", "N", N);
       current_statement__ = 38;
-      validate_non_negative_index("y_pred", "N", N);
+      validate_non_negative_index("betas", "K", K);
       current_statement__ = 39;
-      validate_non_negative_index("y_pred_hat", "N", N);
+      validate_non_negative_index("mu", "N", N);
       current_statement__ = 40;
-      validate_non_negative_index("betas_sim_hat", "K", K);
+      validate_non_negative_index("y_hat", "N", N);
       current_statement__ = 41;
+      validate_non_negative_index("log_lik", "N", N);
+      current_statement__ = 42;
+      validate_non_negative_index("y_pred_hat", "N", N);
+      current_statement__ = 43;
+      validate_non_negative_index("betas_sim_hat", "K", K);
+      current_statement__ = 44;
       validate_non_negative_index("mu_hat", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -248,13 +253,13 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       current_statement__ = 3;
       assign(mu, multiply(X, betas), "assigning variable mu");
       {
-        current_statement__ = 22;
+        current_statement__ = 24;
         lp_accum__.add(normal_lpdf<propto__>(betas, 0, 1));
-        current_statement__ = 23;
+        current_statement__ = 25;
         lp_accum__.add(exponential_lpdf<propto__>(sigma, 1));
-        current_statement__ = 26;
+        current_statement__ = 28;
         for (int i = 1; i <= I; ++i) {
-          current_statement__ = 24;
+          current_statement__ = 26;
           lp_accum__.add(
             normal_lpdf<propto__>(rvalue(y, "y", index_omni(), index_uni(i)),
               mu, sigma));
@@ -328,16 +333,25 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      std::vector<double> y_pred;
-      y_pred = std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
+      std::vector<double> y_hat;
+      y_hat = std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       
       
-      current_statement__ = 7;
+      Eigen::Matrix<double, -1, 1> log_lik;
+      log_lik = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(log_lik, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 9;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 5;
-        assign(y_pred,
+        current_statement__ = 6;
+        assign(log_lik,
+          normal_lpdf<false>(rvalue(y, "y", index_uni(i), index_omni()),
+            rvalue(mu, "mu", index_uni(i)), sigma),
+          "assigning variable log_lik", index_uni(i));
+        current_statement__ = 7;
+        assign(y_hat,
           normal_rng(rvalue(mu, "mu", index_uni(i)), sigma, base_rng__),
-          "assigning variable y_pred", index_uni(i));
+          "assigning variable y_hat", index_uni(i));
       }
       Eigen::Matrix<double, -1, 1> y_pred_hat;
       y_pred_hat = Eigen::Matrix<double, -1, 1>(N);
@@ -355,39 +369,42 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
       mu_hat = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(mu_hat, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 12;
+      current_statement__ = 14;
       sigma_sim_hat = exponential_rng(1, base_rng__);
-      current_statement__ = 13;
+      current_statement__ = 15;
       if (pstream__) {
         stan_print(pstream__, "sigma");
         stan_print(pstream__, sigma);
         stan_print(pstream__, "\n");
       }
-      current_statement__ = 16;
+      current_statement__ = 18;
       for (int k = 1; k <= K; ++k) {
-        current_statement__ = 14;
+        current_statement__ = 16;
         assign(betas_sim_hat, normal_rng(0, 1, base_rng__),
           "assigning variable betas_sim_hat", index_uni(k));
       }
-      current_statement__ = 17;
+      current_statement__ = 19;
       assign(mu_hat, multiply(X, betas_sim_hat), "assigning variable mu_hat");
-      current_statement__ = 18;
+      current_statement__ = 20;
       if (pstream__) {
         stan_print(pstream__, "mu");
         stan_print(pstream__, mu);
         stan_print(pstream__, "\n");
       }
-      current_statement__ = 21;
+      current_statement__ = 23;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 19;
+        current_statement__ = 21;
         assign(y_pred_hat,
           normal_rng(rvalue(mu_hat, "mu_hat", index_uni(i)), sigma_sim_hat,
             base_rng__), "assigning variable y_pred_hat", index_uni(i));
       }
-      current_statement__ = 9;
+      current_statement__ = 11;
       check_greater_or_equal(function__, "sigma_sim_hat", sigma_sim_hat, 0);
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        vars__.emplace_back(y_pred[(sym1__ - 1)]);
+        vars__.emplace_back(y_hat[(sym1__ - 1)]);
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        vars__.emplace_back(log_lik[(sym1__ - 1)]);
       }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         vars__.emplace_back(y_pred_hat[(sym1__ - 1)]);
@@ -464,8 +481,8 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
     
   inline void get_param_names(std::vector<std::string>& names__) const {
     
-    names__ = std::vector<std::string>{"betas", "sigma", "mu", "y_pred",
-      "y_pred_hat", "sigma_sim_hat", "betas_sim_hat", "mu_hat"};
+    names__ = std::vector<std::string>{"betas", "sigma", "mu", "y_hat",
+      "log_lik", "y_pred_hat", "sigma_sim_hat", "betas_sim_hat", "mu_hat"};
     
     } // get_param_names() 
     
@@ -475,6 +492,7 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
                                                                    static_cast<size_t>(K)
                                                                    },
       std::vector<size_t>{}, std::vector<size_t>{static_cast<size_t>(N)},
+      std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)}, std::vector<size_t>{
       }, std::vector<size_t>{static_cast<size_t>(K)},
@@ -505,7 +523,12 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "y_pred" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "y_hat" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
         } 
       }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
@@ -551,7 +574,12 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "y_pred" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "y_hat" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
         } 
       }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
@@ -576,13 +604,13 @@ class posterior_check_model final : public model_base_crtp<posterior_check_model
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"y_pred_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma_sim_hat\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas_sim_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_hat\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"y_pred_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma_sim_hat\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas_sim_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"y_pred_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma_sim_hat\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas_sim_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"betas\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_hat\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"y_pred_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"sigma_sim_hat\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"betas_sim_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"generated_quantities\"},{\"name\":\"mu_hat\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     

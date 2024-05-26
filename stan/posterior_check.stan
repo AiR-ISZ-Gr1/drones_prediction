@@ -24,9 +24,11 @@ model {
 }
 
 generated quantities {
-  array[N]real y_pred;
+  array[N]real y_hat;
+  vector[N] log_lik;
   for (i in 1:N) {
-    y_pred[i] = normal_rng(mu[i], sigma);
+    log_lik[i] = normal_lpdf(y[i,:]|mu[i], sigma);
+    y_hat[i] = normal_rng(mu[i], sigma);
   }
 
   vector[N] y_pred_hat;
